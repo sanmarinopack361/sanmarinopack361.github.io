@@ -25,7 +25,7 @@ window.PACK361 = {
   meetingWhere: "K.L. Carver Auditorium",
 
   // Registration app: paste the web app link (ends in /exec)
-  registrationAppUrl: "PASTE-THE-REGISTRATION-APP-LINK-HERE",
+  registrationAppUrl: "https://script.google.com/macros/u/4/s/AKfycbyaD59WByqsJeOXdUOZez-Gybo0EEVhSJfGxY5x_OG52RvtB7jLCVA9ptOsFunuBNU/exec",
 
   // Other links
   medicalFormUrl: "https://drive.google.com/uc?export=download&id=1vSPqn9QRaI5pdT7gcY9V-OJMvlNnbH22",
