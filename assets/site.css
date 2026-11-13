@@ -100,9 +100,14 @@ table.t{width:100%;border-collapse:collapse;font-size:.92rem;font-variant-numeri
 .step{display:grid;grid-template-columns:36px minmax(0,1fr);gap:12px;align-items:start}
 .step::before{counter-increment:s;content:counter(s);width:32px;height:32px;border-radius:50%;background:var(--gold);color:#3a2a00;display:grid;place-items:center;font-weight:700}
 .step div{display:grid;gap:4px}
-.ess{display:grid;gap:4px;padding:14px;border-radius:12px;border:1px solid var(--line);background:var(--surface)}
+.ess{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:center;padding:14px;border-radius:12px;border:1px solid var(--line);background:var(--surface)}
 .ess b{font-family:var(--f-display);font-size:1.1rem}
 .ess p{font-size:.9rem;color:var(--muted)}
+.ess-grid{grid-template-columns:repeat(3,1fr)}
+@media (max-width:860px){.ess-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.ess-grid{grid-template-columns:1fr}}
+.ess img{width:64px;height:64px;object-fit:contain}
+.ess b{display:block;margin-bottom:2px}
 .cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:.8rem;background:var(--surface)}
 .cal .dh{padding:6px;text-align:center;font-weight:700;color:var(--muted);background:var(--bg);border-bottom:1px solid var(--line);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase}
 .cal .d{min-height:78px;padding:4px 5px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;align-content:start;gap:3px;min-width:0}

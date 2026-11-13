@@ -1,6 +1,12 @@
-Pack 361 website — full replacement package (2026-11-13)
+Pack 361 website — full replacement package (2026-11-13, v2)
 
-This folder is the complete website. Every file in the repo is here, at the same path. Nothing needs deleting.
+This folder is the complete website. Every file in the repo is here, at the same path.
+
+AFTER uploading, delete these 2 old files from the repo (they were replaced):
+  assets/img/rank-badges.jpg   (now rank-badges.webp, keeps the transparent background)
+  assets/img/six-essentials.jpg (now six separate icons in assets/img/essentials/)
+To delete: open the file on GitHub → "..." menu (top right) → Delete file → Commit changes.
+Leaving them does no harm; nothing uses them.
 The Apps Script app is already updated — no redeploy needed for this package.
 
 1. Unzip pack361-website.zip on your computer.
