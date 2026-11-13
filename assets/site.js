@@ -54,23 +54,10 @@
     show(0);
   }
 
-  // Registration page: load the app and size it to its content
-  var frame = document.getElementById("regapp");
-  if (frame) {
-    var url = S.registrationAppUrl || "";
-    var fallback = document.getElementById("regFallback"), missing = document.getElementById("regMissing");
-    if (/^https:\/\/script\.google\.com\//.test(url)) {
-      frame.src = url;
-      $$("[data-reg-link]").forEach(function (a) { a.href = url; });
-    } else {
-      frame.hidden = true; if (fallback) fallback.hidden = true; if (missing) missing.hidden = false;
-    }
-    window.addEventListener("message", function (e) {
-      var host = ""; try { host = new URL(e.origin).hostname; } catch (x) { return; }
-      if (!/(\.googleusercontent\.com|script\.google\.com)$/.test(host)) return;
-      var m = e.data || {};
-      if (m.pack361 === "height" && m.h > 0) frame.style.height = Math.max(500, Math.ceil(m.h) + 24) + "px";
-      if (m.pack361 === "top") frame.scrollIntoView({ block: "start" });
-    });
-  }
+  // Registration links: every [data-reg-link] opens the registration app in the same tab
+  var url = S.registrationAppUrl || "";
+  var ok = /^https:\/\/script\.google\.com\//.test(url);
+  $$("[data-reg-link]").forEach(function (a) { if (ok) a.href = url; });
+  $$("[data-reg-ready]").forEach(function (el) { el.hidden = !ok; });
+  $$("[data-reg-missing]").forEach(function (el) { el.hidden = ok; });
 })();
