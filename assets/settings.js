@@ -28,8 +28,10 @@ window.PACK361 = {
   registrationAppUrl: "https://script.google.com/macros/s/AKfycbyaD59WByqsJeOXdUOZez-Gybo0EEVhSJfGxY5x_OG52RvtB7jLCVA9ptOsFunuBNU/exec",
 
   // Other links
-  medicalFormUrl: "https://drive.google.com/uc?export=download&id=1vSPqn9QRaI5pdT7gcY9V-OJMvlNnbH22",
-  shirtFormUrl: "https://forms.gle/yoT9Hh1neWRNdrSD9",
+  // Medical form: the site asks the registration app for the current link (the app's "Medical Form"
+  // folder / Settings tab), so there is ONE place to change it. This link is only a backup.
+  medicalFormUrl: "https://drive.google.com/uc?export=download&id=1L9LT3yeK6YzK1gKvsq-umkNzHRT5fkIZ",
+  shirtFormUrl: "/t-shirts/",
 
   // Leave empty ("") to hide the Cubmaster line on the Resources page
   cubmaster: "",

@@ -7,7 +7,7 @@
   // Simple text values
   $$("[data-s]").forEach(function (el) { var v = S[el.getAttribute("data-s")]; if (v != null && v !== "") el.textContent = v; });
   $$("[data-show-if]").forEach(function (el) { el.hidden = !S[el.getAttribute("data-show-if")]; });
-  $$("[data-href]").forEach(function (el) { var v = S[el.getAttribute("data-href")]; if (v) el.href = v; });
+  $$("[data-href]").forEach(function (el) { var v = S[el.getAttribute("data-href")]; if (v) { el.href = v; if (v.charAt(0) === "/") { el.removeAttribute("target"); el.removeAttribute("rel"); } } });
   $$("[data-school]").forEach(function (el) { if (S.schoolLine) el.textContent = S.schoolLine; });
 
   // Banner
@@ -60,4 +60,13 @@
   $$("[data-reg-link]").forEach(function (a) { if (ok) a.href = url; });
   $$("[data-reg-ready]").forEach(function (el) { el.hidden = !ok; });
   $$("[data-reg-missing]").forEach(function (el) { el.hidden = ok; });
+
+  // Medical form: use the same link the registration app uses (one place to change it)
+  var med = $$('[data-href="medicalFormUrl"]');
+  if (ok && med.length && window.fetch) {
+    fetch(url + "?api=boot").then(function (r) { return r.json(); }).then(function (b) {
+      var m = /(?:^|\n)medical_form_url,"?([^"\n]+)/.exec((b && b.settingsCsv) || "");
+      if (m && /^https:\/\//.test(m[1])) med.forEach(function (a) { a.href = m[1]; });
+    }).catch(function () { /* keep the backup link */ });
+  }
 })();

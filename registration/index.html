@@ -8,7 +8,8 @@
 <link rel="icon" href="/assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@600;700&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="/assets/forms.css">
 <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
@@ -22,22 +23,8 @@
   <div class="bubble" role="note"><span class="b-tag">Kindergarten to 5th grade</span><p class="b-text">It's not too late to join! We're still accepting registrations for <span class="pop-date">2026-27</span></p></div>
 </div></section>
 <main class="wrap" id="page">
- <div class="head"><p class="eyebrow">Scouting year <span data-s="scoutingYear">2026-27</span></p><h1>Register your scouts</h1><p>One form for your whole family. It takes about 5 minutes.</p></div>
- <div class="grid side">
-  <div class="panel"><h2>How it works</h2><div class="steps">
-   <div class="step"><div><b>Fill out the pack form</b><p class="muted">Parent contacts, each scout's den, and an optional talent survey.</p></div></div>
-   <div class="step"><div><b>Pay the pack</b><p class="muted">Send one Zelle payment for the whole family, then enter the confirmation number.</p></div></div>
-   <div class="step"><div><b>Register with Scouting America</b><p class="muted">The form links each scout to the right Scouting America page at the end.</p></div></div>
-  </div>
-  <div data-reg-ready><a class="btn gold" data-reg-link href="#" style="font-size:1.05rem;padding:12px 22px">Start registration →</a>
-  <p class="muted" style="font-size:.88rem;margin-top:8px">The form opens on a secure Google page. When you're done, use your browser's back button to return to the pack website.</p></div>
-  <div class="panel gold" data-reg-missing hidden><h3>Registration form coming soon</h3><p>The registration link hasn't been added yet. Email info@sanmarinopack361.org and we'll send it to you.</p></div>
-  </div>
-  <div class="grid">
-   <div class="panel soft"><h3>Have ready</h3><ul><li>Each scout's name and grade</li><li>Parent or guardian email and cell phone</li><li>Your Zelle app</li></ul></div>
-   <div class="panel"><h3>Medical form</h3><p class="muted">Parts A and B for each scout. Paper only: bring it to your first pack or den event.</p><a class="btn ghost" data-href="medicalFormUrl" href="https://drive.google.com/uc?export=download&amp;id=1vSPqn9QRaI5pdT7gcY9V-OJMvlNnbH22" target="_blank" rel="noopener">Download (PDF) ↓</a></div>
-  </div>
- </div>
+ <div id="reg" class="appform"><div id="app"><div class="loading">Loading the registration form…</div></div></div>
+ <noscript><div class="panel gold"><h3>Please turn on JavaScript</h3><p>The registration form needs JavaScript. Or email info@sanmarinopack361.org and we'll help.</p></div></noscript>
 </main>
 <footer class="site"><div class="wrap">
   <div><b>Cub Scout Pack 361</b><br>San Marino, California<br>Greater Los Angeles Area Council · Rose Bowl District</div>
@@ -46,5 +33,6 @@
 </div></footer>
 <script src="/assets/settings.js"></script>
 <script src="/assets/site.js"></script>
+<script src="/assets/register.js"></script>
 </body>
 </html>

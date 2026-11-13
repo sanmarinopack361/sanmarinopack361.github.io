@@ -24,7 +24,8 @@ Keep the quotes and commas exactly as they are.
 |---|---|
 | Home | `index.html` |
 | Join | `join-us/index.html` |
-| Register | `registration/index.html` (just shows the registration app) |
+| Register | `registration/index.html` (registration form; the form itself is `assets/register.js`) |
+| T-shirts | `t-shirts/index.html` (T-shirt order form; the form itself is `assets/shirts.js`) |
 | Cub Scouting | `cub-scouting/index.html` |
 | Uniforms | `uniforms/index.html` |
 | Camping & Hiking | `camping-hiking/index.html` |
@@ -40,7 +41,8 @@ The page addresses match the old Google Sites addresses, so old links keep worki
 
 - This repository is **public**. Never put rosters, registration data, passwords or anything private here.
 - Use photos only if the pack has permission from the families.
-- Registration data never touches this site. It stays in the pack's Google Drive (treasurer@).
+- Registration data is never stored on this site. The forms send it straight to the pack's Apps Script app (treasurer@), which saves it in the Registration Sheet on Google Drive.
+- Prices, dens, deadlines and the T-shirt pickup note come from the Registration Sheet's Settings / Charges / Dens tabs, not from this site.
 
 ## Owners
 

@@ -1,0 +1,20 @@
+Pack 361 website — full replacement package (2026-11-13)
+
+This folder is the complete website. Every file in the repo is here, at the same path. Nothing needs deleting.
+The Apps Script app is already updated — no redeploy needed for this package.
+
+1. Unzip pack361-website.zip on your computer.
+2. Go to github.com/sanmarinopack361/sanmarinopack361.github.io (signed in as pack361-treasurer or your own account).
+3. Click "Add file" → "Upload files".
+4. Open the unzipped pack361-website folder, select EVERYTHING inside it (all folders and files —
+   not the pack361-website folder itself), and drag it onto the GitHub upload page.
+   Wait until every file shows in the list.
+5. Scroll down → "Commit changes". Files with the same name are replaced.
+6. Wait 1–2 minutes (progress: the "Actions" tab; green check = live).
+7. Open https://sanmarinopack361.github.io and press Shift+Reload (Cmd+Shift+R on Mac) to skip old cached files.
+
+Test: one registration (/registration/) and one T-shirt order (/t-shirts/), in a private window and on an iPhone.
+Delete the test rows from the Registration Sheet afterward.
+
+Medical form: the website now asks the app for the medical form link, so it always matches the app.
+To change the form, replace the PDF the app uses (its Medical Form folder / Settings tab). Nothing on the website to edit.
